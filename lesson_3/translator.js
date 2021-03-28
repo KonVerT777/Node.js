@@ -9,6 +9,8 @@ const { FOLDER, IAM_TOKEN } = require ('./auth')
 const app = express()
 
 app.use(express.static(__dirname + '/public'))
+app.use(express.json())
+app.use(express.text())
 
 app.get('/', (req, res) => {
     response.sendFile('/index.html')
@@ -20,11 +22,11 @@ app.post('/', (req, res, next) => {
     }, function(req, res) {
         axios.post('https://translate.api.cloud.yandex.net/translate/v2/translate/', {
                 'folder_id': FOLDER,
-                'texts': [req.body.fwords],
+                'texts': [req.body.text],
                 'targetLanguageCode': 'ru'
             }, {
                 headers: {
-                    'Content-type': 'text/html',
+                    'Content-type': 'application/json, text/plain, */*',
                     'Authorization': 'Bearer ' + IAM_TOKEN
                 }
             })
@@ -38,4 +40,4 @@ app.post('/', (req, res, next) => {
     }
 )
 
-app.listen(3000, () => console.log(`Listening at port 3000 ....`));
+app.listen(3000, () => console.log(`Listening at port 3000 ....`))

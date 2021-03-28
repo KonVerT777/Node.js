@@ -9,11 +9,12 @@
 <body>
     <h1>Поможем перевести слова с английского языка на русский</h1>
 
-        <form action="http://localhost:3000" method="POST" id="translateform">
-        <label for="fwords">Пожалуйста, введите слово на английском:</label>
-        <input type="text" id="fwords" name="fwords"><br><br>
+    <form action="http://localhost:3000" method="POST">
+        <label>Пожалуйста, введите слово на английском:
+            <input type="text" name="text"><br><br>
+        </label>
         <p>Нажмите кнопку "Перевести" и ожидайте ответа</p>
-        <button type="submit" form="nameform" value="Submit">Перевести</button>
+        <button type="submit">Перевести</button>
     </form>
 
 </body>
