@@ -1,4 +1,4 @@
 module.exports = {
-    IAM_TOKEN: 't1.9euelZqLm4vMnc6Vz5KVnZSPjMiQyO3rnpWaj8bJiZGeipaOx87Ml5OWxozl9PcvWX58-e9nI37F3fT3bwd8fPnvZyN-xQ.KKftP-YxRuiVbzjG7jZNNf7b3lZMmkiSoJJoN5MmAuFLYwPuypS6xZCAOP7aPbjBOHtTfH5aMn9DVAEgFqlwDg',
+    IAM_TOKEN: 't1.9euelZqXx5uTjZmamIySkIqdzMaXlu3rnpWaj8bJiZGeipaOx87Ml5OWxozl8_dcE3h8-e8nVzIu_d3z9xxCdXz57ydXMi79.TBk64squ2bYGtomJJXAteX0sUaABON_olyIX2SUB88BI6UixKIj3cKO2KYszp_kFdfUKJ1nFx7lHFuwzS0hSAg',
     FOLDER: 'b1g5acl5iimt4ruq8gjs'
 }

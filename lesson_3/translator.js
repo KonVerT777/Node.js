@@ -10,7 +10,8 @@ const app = express()
 
 app.use(express.static(__dirname + '/public'))
 app.use(express.json())
-app.use(express.text())
+app.use(express.urlencoded({ extended: true }))
+
 
 app.get('/', (req, res) => {
     response.sendFile('/index.html')
@@ -19,23 +20,23 @@ app.get('/', (req, res) => {
 app.post('/', (req, res, next) => {
     console.log('The response will be sent by the next function ...')
      next()
-    }, function(req, res) {
+    }, function(req, resp) {
         axios.post('https://translate.api.cloud.yandex.net/translate/v2/translate/', {
                 'folder_id': FOLDER,
                 'texts': [req.body.text],
                 'targetLanguageCode': 'ru'
             }, {
                 headers: {
-                    'Content-type': 'application/json, text/plain, */*',
+                    'Content-type': 'application/json',
                     'Authorization': 'Bearer ' + IAM_TOKEN
                 }
             })
             .then((res) => {
-                console.log(res.body.text)
-                res.send(req.body.translations[0].text)
+                console.log(res.data)
+                resp.send('Ловите перевод: ' + res.data.translations[0].text)
             }).catch((err) => {
                 console.log(err)
-                res.status('500')
+                res.status('500').send('Что-то пошло не так!')
             })
     }
 )
