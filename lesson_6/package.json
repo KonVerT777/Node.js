@@ -1,0 +1,23 @@
+{
+  "name": "lesson_5_1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "consolidate": "^0.16.0",
+    "cookie-parser": "^1.4.5",
+    "express": "^4.17.1",
+    "express-mysql-session": "^2.1.5",
+    "express-session": "^1.17.1",
+    "handlebars": "^4.7.7",
+    "mysql2": "^2.2.5",
+    "passport": "^0.4.1",
+    "passport-github2": "^0.1.12"
+  }
+}

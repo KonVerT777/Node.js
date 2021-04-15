@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo</title>
+</head>
+<body>
+    <h2>Ваш текущий список задач следующий:</h2> 
+        {{#each tasks}}
+            <ul>
+                <li>
+                    {{title}}  {{completed}}   <a href="/tasks/delete/{{id}}">Удалить</a> <a href="/tasks/edit/{{id}}">Редактировать</a> 
+                    <a href="/tasks/completed/{{id}}">Выполнено</a>
+                </li>
+            </ul>
+        {{/each}}
+
+    <h2>Добавить новую задачу</h2>
+    <form action="/tasks/add" method="post">
+    	<input type="text" name="title" placeholder="Впишите текст задачи">
+        <button type="submit">Добавить</button>
+    </form>
+</body>
+</html>
