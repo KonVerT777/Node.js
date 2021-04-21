@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация пользователя</title>
+</head>
+
+<body>
+    <h2>Авторизация</h2>
+    <form action="/auth/login/" method="post">
+        <label>
+            Имя пользователя
+            <input type="text" name="username" placeholder="Введите логин">
+        </label>
+        <label>
+            Пароль
+            <input type="password" name="password" placeholder="Введите пароль">
+        </label>
+        <input type="checkbox" name="remember"> <label>Запомнить меня</label>
+        <button type="submit">Войти</button><br><br>
+        <a href="/auth/github">Войти с помощью GitHub</a>
+    </form>
+</body>
+
+</html>
