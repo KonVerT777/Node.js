@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chat App</title>
+</head>
+
+<body>
+  <h2>Please enjoy our chat</h2>
+  <p id='usersNum'></p>
+  <p>Please write in area and click button "Change username"
+  </p>
+  <section>
+    <div id="change_username">
+      <input id="username" type="text" />
+      <button id="send_username" type="button">Change username</button>
+    </div>
+  </section>
+
+  <section id="chatroom">
+    <section id="feedback"></section>
+  </section>
+
+  <section id="input_zone">
+    <input id="message" class="vertical-align" type="text" />
+    <button id="send_message" class="vertical-align" type="button">Send</button>
+  </section>
+
+  <script src="http://code.jquery.com/jquery-latest.min.js"></script>
+  <script src="/socket.io/socket.io.js"></script>
+  <script>var socket = io.connect('/')</script>
+  <script src="./chat.js"></script>
+</body>
+
+</html>
